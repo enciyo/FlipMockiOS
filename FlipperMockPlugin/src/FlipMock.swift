@@ -13,7 +13,7 @@ public class FlipMock {
     public static let plugin : MockPlugin  = MockPluginImp.init() as MockPlugin
     
     internal static let PLUGIN_ID:String = "flipper-plugin-enciyo-flipmock"
-    internal static let RUN_IN_BACKGROUND :Bool = false
+    internal static let RUN_IN_BACKGROUND :Bool = true
     
 
 }
