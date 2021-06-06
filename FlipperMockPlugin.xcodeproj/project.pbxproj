@@ -11,6 +11,13 @@
 		BE3311F8266D1CA600992F70 /* MockManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311E4266D1C8E00992F70 /* MockManagement.swift */; };
 		BE3311F9266D1CA600992F70 /* FlipSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311E3266D1C8E00992F70 /* FlipSession.swift */; };
 		BE3311FA266D1CA600992F70 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311EB266D1C8E00992F70 /* Mapper.swift */; };
+		BE3311FB266D1DB800992F70 /* CodableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311EF266D1C8E00992F70 /* CodableExt.swift */; };
+		BE3311FC266D1DB800992F70 /* ExceptionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311F0266D1C8E00992F70 /* ExceptionExt.swift */; };
+		BE3311FD266D1DB800992F70 /* GenericExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311F1266D1C8E00992F70 /* GenericExt.swift */; };
+		BE3311FE266D1DB800992F70 /* FlipperConnectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311F2266D1C8E00992F70 /* FlipperConnectionExt.swift */; };
+		BE3311FF266D1DB800992F70 /* FlipMockUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311ED266D1C8E00992F70 /* FlipMockUrlProtocol.swift */; };
+		BE331200266D1DB800992F70 /* MockPluginImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311F4266D1C8E00992F70 /* MockPluginImp.swift */; };
+		BE331201266D1DB800992F70 /* MockPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311F5266D1C8E00992F70 /* MockPlugin.swift */; };
 		BE7A43C4265D6773001FAB86 /* FlipperMockPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = BEEE8B202658E4E800057CE4 /* FlipperMockPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEEE8B302658E85B00057CE4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8B2F2658E85B00057CE4 /* Config.swift */; };
 		BEEE8B322658E8B100057CE4 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8B312658E8B100057CE4 /* Mock.swift */; };
@@ -277,6 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3311FB266D1DB800992F70 /* CodableExt.swift in Sources */,
+				BE3311FC266D1DB800992F70 /* ExceptionExt.swift in Sources */,
+				BE3311FD266D1DB800992F70 /* GenericExt.swift in Sources */,
+				BE3311FE266D1DB800992F70 /* FlipperConnectionExt.swift in Sources */,
+				BE3311FF266D1DB800992F70 /* FlipMockUrlProtocol.swift in Sources */,
+				BE331200266D1DB800992F70 /* MockPluginImp.swift in Sources */,
+				BE331201266D1DB800992F70 /* MockPlugin.swift in Sources */,
 				BEEE8B482659323200057CE4 /* Exceptions.swift in Sources */,
 				BE3311F8266D1CA600992F70 /* MockManagement.swift in Sources */,
 				BE3311F7266D1CA600992F70 /* FlipMock.swift in Sources */,
