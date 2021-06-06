@@ -40,7 +40,7 @@
 # ...
 # Flipper integration
 #  ...
-pod 'FlipMock', 'git...' 
+pod 'FlipperNetworkMockPlugin', :git => 'https://github.com/enciyo/FlipMockiOS'
 ```
 
 <a href="https://fbflipper.com/docs/getting-started/ios-native">How to adding Flipper to IOS apps?</a>
