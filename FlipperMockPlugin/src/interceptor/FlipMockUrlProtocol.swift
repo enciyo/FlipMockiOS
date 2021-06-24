@@ -24,8 +24,10 @@ public class FlipMockUrlProtocol : URLProtocol  {
            let mock = exist.mapResponseData(),
            let url = request.url,
            let response = HTTPURLResponse(url: url, statusCode: exist.httpCode, httpVersion: "HTTP/1.1", headerFields: cannedHeaders){
-            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: URLCache.StoragePolicy.notAllowed)
-            client?.urlProtocol(self, didLoad: mock)
+            if exist.isMockEnable {
+                client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: URLCache.StoragePolicy.notAllowed)
+                client?.urlProtocol(self, didLoad: mock)
+            }
         }
         client?.urlProtocolDidFinishLoading(self)
     }

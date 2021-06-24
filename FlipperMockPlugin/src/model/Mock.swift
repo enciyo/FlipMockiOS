@@ -15,6 +15,7 @@ internal struct Mock  : Codable {
     var httpCode: Int = 200 // Feature
     var requestType: MockRequestMethods? = nil // var
     var contentTypes: MockContentTypes = MockContentTypes.JSON // Feature
+    var isMockEnable: Bool = true
 }
 
 
@@ -27,7 +28,16 @@ internal extension Mock{
     
     func isSameMock(outMock:Mock) -> Bool {
         return endpoint == outMock.endpoint &&
-            queryParams == outMock.queryParams && isSameRequestType(outMock: outMock)
+            queryParamsIsValid(outMock: outMock)
+            && isSameRequestType(outMock: outMock)
+    }
+    
+    private func queryParamsIsValid(outMock:Mock) -> Bool {
+        if queryParams.isEmpty {
+            return true
+        }else{
+            return queryParams == outMock.queryParams
+        }
     }
     
     func isSameRequestType(outMock:Mock)-> Bool {

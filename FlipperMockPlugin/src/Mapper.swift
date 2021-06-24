@@ -14,7 +14,11 @@ internal extension Dictionary where Key == AnyHashable {
         return Mock(
             endpoint: try parseMap("endpoint", transform: {item -> String in item }),
             dummyJsonData: try parseMap("dummyJsonData", transform: {item -> String in item.description }),
-            uniqueId: try parseMap("uniqueId", transform: {item -> String in item })
+            uniqueId: try parseMap("uniqueId", transform: {item -> String in item }),
+            queryParams: try parseMap("queryParams", transform: {item -> String in item }),
+            httpCode: try parseMap("statusCode", transform: {item -> Int in item }),
+            requestType: MockRequestMethods.safeValueOf(value: (try parseMap("httpMethod", transform: {item -> String in item }))),
+            isMockEnable: try parseMap("isMockEnable", transform: {item -> Bool in item})
         )
     }
     
@@ -51,7 +55,8 @@ internal extension Alamofire.URLRequest {
         return Mock(
             endpoint: url?.path ?? String.Unique,
             dummyJsonData: String.Unique,
-            uniqueId: String.Unique
+            uniqueId: String.Unique,
+            requestType: MockRequestMethods.safeValueOf(value: urlRequest?.httpMethod ?? "")
         )
     }
 }

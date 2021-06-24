@@ -29,6 +29,7 @@ internal class MockManagement {
     
     @discardableResult func addAll(mock:[Mock]) -> Bool {
         dispatchQueue.sync {
+            self.currentList.removeAll()
             self.currentList += mock
         }
         return true
