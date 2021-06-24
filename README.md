@@ -114,6 +114,6 @@ let safeProtocolClasses = [FlipMockUrlProtocol.self] + (configuration.protocolCl
 # How can I mock the response?
 In this section, you can mock response using   <a href="">FlipMock</a>  desktop Plugin on the  <a href="https://github.com/facebook/flipper"> Flipper.</a>
 
-<a href="">How to use FlipMock Desktop Plugin?</a>
+<a href="https://github.com/enciyo/FlipMockDesktop">How to use FlipMock Desktop Plugin?</a>
 
 
