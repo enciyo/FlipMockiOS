@@ -24,12 +24,10 @@
 ## SDK Features
 
 - [x] Support <a href="https://github.com/Alamofire/Alamofire">Alomofire</a>
-- [ ] Support <a href="https://github.com/Moya/Moya">Moya</a>
-### Waiting for FlipMock Desktop Plugin support
 - [x] Mock the response by HTTP method. 
 - [x] Mock the response by query parameters. 
 - [x] For response, support HTTP code
-
+- [ ] Support <a href="https://github.com/Moya/Moya">Moya</a>
 
 
 ## Installation
