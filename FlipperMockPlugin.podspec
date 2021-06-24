@@ -2,7 +2,7 @@ folly_compiler_flags = '-DDEBUG=1 -DFLIPPER_OSS=1 -DFB_SONARKIT_ENABLED=1 -DFOLL
 Pod::Spec.new do |spec|
   #Descriptions
   spec.name         = "FlipperNetworkMockPlugin"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.1"
   spec.summary      = "Flipper Mock"
   spec.module_name = 'FlipperMockPlugin'
   spec.homepage     = "https://github.com/enciyo/"

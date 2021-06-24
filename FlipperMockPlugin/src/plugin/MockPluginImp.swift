@@ -47,7 +47,7 @@ internal class MockPluginImp: NSObject,MockPlugin {
             guard let self = self else { return }
             
             safeHandle {
-                let array = params["result"] as! NSArray
+                let array = params[self.RECEIVE_METHOD_ADD_ALL] as! NSArray
                 let newArray = try array.map { item in
                     try (item as! [AnyHashable:Any]).mapMock()
                 }
