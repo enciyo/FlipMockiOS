@@ -16,7 +16,7 @@ internal extension Dictionary where Key == AnyHashable {
             dummyJsonData: try parseMap("dummyJsonData", transform: {item -> String in item.description }),
             uniqueId: try parseMap("uniqueId", transform: {item -> String in item }),
             queryParams: try parseMap("queryParams", transform: {item -> String in item }),
-            httpCode: try parseMap("statusCode", transform: {item -> Int in item }),
+            httpCode: Int(try parseMap("statusCode", transform: {item -> String in item }) as String) ?? 200,
             requestType: MockRequestMethods.safeValueOf(value: (try parseMap("httpMethod", transform: {item -> String in item }))),
             isMockEnable: try parseMap("isMockEnable", transform: {item -> Bool in item})
         )
@@ -24,7 +24,7 @@ internal extension Dictionary where Key == AnyHashable {
     
     func mapConfig() throws -> Config {
         return Config(
-            isLoggable: try parseMap("isLogable", transform: {item -> Bool in item }),
+            isLoggable: true,
             isMockEnable: try parseMap("isMockEnable", transform: {item -> Bool in item })
         )
     }
@@ -35,7 +35,7 @@ internal extension Dictionary where Key == AnyHashable {
             throw Exceptions.SerializeException(message: "Expected \(param) nil")
         }
         if (obje as? T == nil)  {
-            throw Exceptions.SerializeException(message: "\(param) expected type: '\(type(of: T.self))")
+            throw Exceptions.SerializeException(message: "\(param) expected type: '\(type(of: T.self)) but is '\(type(of: obje.self))")
         }
         return obje as! T
     }

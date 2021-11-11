@@ -10,14 +10,17 @@ import Alamofire
 
 
 public class FlipMockUrlProtocol : URLProtocol  {
-    
-    
+
     private lazy var mockManagement: MockManagement = {
         return MockManagement.shared
     }()
     
     private let cannedHeaders = ["Content-Type" : "application/json; charset=utf-8"]
    
+    
+    struct MockError : Swift.Error, LocalizedError {
+        var errorDescription: String?
+    }
     
     public override func startLoading(){
         if let exist = mockManagement.findMockOrNull(request.mapMock()),
@@ -37,7 +40,7 @@ public class FlipMockUrlProtocol : URLProtocol  {
         let mockManagement = MockManagement.shared
         let isMockEnable = mockManagement.config.isMockEnable
         let exist = mockManagement.findMockOrNull(request.mapMock())
-        return isMockEnable && exist != nil
+        return isMockEnable && exist != nil && exist?.isMockEnable == true
     }
     
     

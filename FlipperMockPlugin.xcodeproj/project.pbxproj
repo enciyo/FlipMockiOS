@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BF660554864DC31287EA824 /* libPods-FlipperMockPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53720408B62D428543D7168E /* libPods-FlipperMockPlugin.a */; };
 		BE3311F7266D1CA600992F70 /* FlipMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311F6266D1C8E00992F70 /* FlipMock.swift */; };
 		BE3311F8266D1CA600992F70 /* MockManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311E4266D1C8E00992F70 /* MockManagement.swift */; };
 		BE3311F9266D1CA600992F70 /* FlipSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3311E3266D1C8E00992F70 /* FlipSession.swift */; };
@@ -25,6 +24,7 @@
 		BEEE8B342658E90800057CE4 /* MockRequestMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8B332658E90800057CE4 /* MockRequestMethods.swift */; };
 		BEEE8B362658E94400057CE4 /* MockContentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8B352658E94400057CE4 /* MockContentTypes.swift */; };
 		BEEE8B482659323200057CE4 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8B472659323200057CE4 /* Exceptions.swift */; };
+		CC10DCBD1FA90DDDA7473774 /* Pods_FlipperMockPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC60420BF298F79E7D2D11B /* Pods_FlipperMockPlugin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		53720408B62D428543D7168E /* libPods-FlipperMockPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlipperMockPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CC60420BF298F79E7D2D11B /* Pods_FlipperMockPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlipperMockPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB142F6EDE8BD549445A294 /* Pods-FlipperMockPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlipperMockPlugin.release.xcconfig"; path = "Target Support Files/Pods-FlipperMockPlugin/Pods-FlipperMockPlugin.release.xcconfig"; sourceTree = "<group>"; };
 		BE3311E3266D1C8E00992F70 /* FlipSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipSession.swift; sourceTree = "<group>"; };
 		BE3311E4266D1C8E00992F70 /* MockManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockManagement.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BF660554864DC31287EA824 /* libPods-FlipperMockPlugin.a in Frameworks */,
+				CC10DCBD1FA90DDDA7473774 /* Pods_FlipperMockPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		8F49FBE9698AE8E1B300135C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53720408B62D428543D7168E /* libPods-FlipperMockPlugin.a */,
+				0CC60420BF298F79E7D2D11B /* Pods_FlipperMockPlugin.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
