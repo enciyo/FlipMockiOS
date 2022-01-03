@@ -16,10 +16,21 @@ internal extension Dictionary where Key == AnyHashable {
             dummyJsonData: try parseMap("dummyJsonData", transform: {item -> String in item.description }),
             uniqueId: try parseMap("uniqueId", transform: {item -> String in item }),
             queryParams: try parseMap("queryParams", transform: {item -> String in item }),
-            httpCode: Int(try parseMap("statusCode", transform: {item -> String in item }) as String) ?? 200,
+            httpCode: httpCodeMap(),
             requestType: MockRequestMethods.safeValueOf(value: (try parseMap("httpMethod", transform: {item -> String in item }))),
             isMockEnable: try parseMap("isMockEnable", transform: {item -> Bool in item})
         )
+    }
+    
+    
+    func httpCodeMap() -> Int {
+        if let code = self["statusCode"] as? String {
+            return Int(code) ?? 200
+        } else if let code = self["statusCode"] as? Int {
+            return code
+        } else {
+            return 200
+        }
     }
     
     func mapConfig() throws -> Config {
