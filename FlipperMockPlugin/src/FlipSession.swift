@@ -10,13 +10,13 @@ import Alamofire
 
 public class FlipSession {
     
-    public static let `default` : SessionManager = {
+    public static let `default` : Session = {
         let configuration: URLSessionConfiguration = {
             let configuration = URLSessionConfiguration.default
             let safeProtocolClasses = [FlipMockUrlProtocol.self] + (configuration.protocolClasses ?? [])
             configuration.protocolClasses = safeProtocolClasses
             return configuration}()
-    return SessionManager(configuration:configuration)}()
+    return Session(configuration:configuration)}()
     
     /**
      # Warning: #
