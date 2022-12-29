@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
   spec.dependency  'YogaKit'
   spec.dependency  'Yoga'
-  spec.dependency 'Alamofire', '~> 5.0'
+  spec.dependency 'Alamofire', '4.9.1'
   spec.dependency 'FlipperKit/Core'
   spec.compiler_flags = folly_compiler_flags
   spec.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)\"/Headers/Private/FlipperKit/**" }
